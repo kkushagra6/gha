@@ -1,10 +1,9 @@
 name: DifferentEvent2
 on:
-    issues:
-        types: [opened]
+    issues
 jobs:
-    issue:
+    issue1:
         runs-on: ubuntu-latest
         steps:
             - name: echo the issue details
-              uses: echo ${{toJson(github.event)}}
+              uses: echo "${{ toJson(github.event)}}""
